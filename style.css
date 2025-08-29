@@ -1,0 +1,189 @@
+
+:root{
+  --bg: #0b1020;
+  --card: #121a2f;
+  --muted: #9fb0d3;
+  --text: #e6eeff;
+  --accent: #5aa9ff;
+  --accent-2: #8be9c7;
+  --border: #223256;
+  --shadow: 0 8px 24px rgba(0,0,0,.35);
+}
+
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+img{ max-width:100%; height:auto; display:block; }
+a{ color:var(--accent); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, #0b1020 0%, #0e1530 100%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+main, header, footer{
+  width:min(1100px, 92%);
+  margin-inline:auto;
+}
+
+hr{
+  border:none;
+  border-top:1px solid var(--border);
+  margin:28px auto;
+  width:min(1100px, 92%);
+  opacity:.6;
+}
+
+
+header{
+  margin-top:28px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  box-shadow:var(--shadow);
+  padding:22px;
+}
+
+header table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+header td{
+  vertical-align:middle;
+  padding:8px 12px;
+}
+
+header img{
+  width:140px; height:140px; object-fit:cover;
+  border-radius:16px;
+  border:2px solid var(--border);
+  box-shadow:0 6px 18px rgba(0,0,0,.35);
+}
+
+header h2{
+  margin:0 0 6px;
+  font-size:1.6rem;
+  letter-spacing:.3px;
+}
+
+header p{
+  margin:.2rem 0 1rem;
+  color:var(--muted);
+}
+
+header a{
+  display:inline-block;
+  background:linear-gradient(135deg, var(--accent), var(--accent-2));
+  color:#061021;
+  font-weight:700;
+  padding:.6rem 1rem;
+  border-radius:12px;
+  transition: transform .12s ease, box-shadow .12s ease;
+  box-shadow:0 6px 16px rgba(90,169,255,.35);
+}
+header a:hover{ transform:translateY(-1px); }
+
+
+h2{
+  font-size:1.4rem;
+  margin:0 0 .6rem;
+}
+section{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  box-shadow:var(--shadow);
+  padding:20px;
+  width:min(1100px, 92%);
+  margin: 0 auto;
+}
+
+#Projects article{
+  background:#0f1830;
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:14px;
+  margin:12px 0;
+}
+#Projects li{ margin-bottom:.3rem; }
+
+
+ul{
+  margin:.2rem 0 0 1.1rem;
+}
+
+
+#Education table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  margin-top:.6rem;
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+}
+
+#Education th, #Education td{
+  padding:12px 14px;
+  text-align:left;
+}
+
+#Education thead th{
+  background:#0f1a36;
+  color:#cfe0ff;
+  font-weight:700;
+  border-bottom:1px solid var(--border);
+}
+
+#Education tbody tr{
+  background:rgba(255,255,255,.02);
+}
+#Education tbody tr:nth-child(even){
+  background:rgba(255,255,255,.05);
+}
+
+#Education tbody td{
+  border-bottom:1px solid #1b2a4d;
+}
+#Education tbody tr:last-child td{
+  border-bottom:none;
+}
+
+
+#Education tbody tr:hover{
+  background:rgba(138, 233, 199, .08);
+}
+
+
+footer{
+  background:transparent;
+  padding:18px 0 40px;
+  width:min(1100px, 92%);
+  margin:0 auto 40px;
+}
+footer h2{ margin-bottom:.3rem; }
+footer ul{ list-style:square; }
+footer li{ margin:.25rem 0; }
+
+
+@media (max-width: 720px){
+  header td{ display:block; padding:0; }
+  header img{ margin:0 auto 14px; width:120px; height:120px; }
+  header h2{ text-align:center; }
+  header p, header a{ text-align:center; }
+  header a{ margin: 6px auto 0; }
+
+  section{ padding:16px; }
+  #Education th, #Education td{ padding:10px 12px; }
+}
+
+
+a:focus, button:focus{
+  outline:2px solid var(--accent-2);
+  outline-offset:2px;
+  border-radius:10px;
+}
