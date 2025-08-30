@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HTML Basics</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/path/to/chat-widget.css" />
+
+
     </head>
     <body>
         <header>
@@ -103,5 +106,14 @@
                     Profile</a></li>
         </ul>
         </footer>
+        <script defer src="/path/to/chat-widget.js"></script>
+<script>
+  window.SiteChat = {
+    backendURL: "http://YOUR_BACKEND_HOST:8000",
+    title: "Ask our site 🤖",
+    welcome: "Hi! I can answer using info from this website.",
+  };
+</script>
     </body>
+
 </html>
