@@ -197,11 +197,13 @@
 
         <h2>My Resume</h2>
 
-        <!-- PDF VIEWER (make sure file name matches your uploaded resume) -->
+        <!-- PDF Viewer (Make sure file name is correct) -->
         <iframe src="Neels_Resume.pdf" class="pdf-viewer"></iframe>
 
-        <!-- DOWNLOAD BUTTON ONLY INSIDE POPUP -->
-        <a href="Neels_Resume.pdf" download class="btn-small modal-download">Download Resume</a>
+        <!-- DOWNLOAD BUTTON INSIDE MODAL ONLY -->
+        <a href="Neels_Resume.pdf" download class="btn-small modal-download">
+            Download Resume
+        </a>
     </div>
 </div>
 
@@ -211,7 +213,7 @@
         document.getElementById("resumeModal").style.display = "block";
     }
 
-    // Close modal when clicking X
+    // Close modal on X
     document.querySelector(".close").onclick = function () {
         document.getElementById("resumeModal").style.display = "none";
     }
@@ -226,7 +228,9 @@
 </script>
 
 
+
 </body>
 </html>
+
 
 
