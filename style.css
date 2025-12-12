@@ -1,3 +1,27 @@
+/* Make Connect + View Resume side by side */
+.top-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* Make Connect button same size as View Project button */
+.btn-small {
+  display:inline-block;
+  background:linear-gradient(135deg, var(--accent), var(--accent-2));
+  color:#061021;
+  font-weight:600;
+  padding:6px 14px;
+  font-size:0.9rem;
+  border-radius:8px;
+  text-decoration:none;
+  box-shadow:0 4px 12px rgba(90,169,255,.25);
+  transition:transform .12s ease;
+}
+
+.btn-small:hover {
+  transform: translateY(-1px);
+}
 :root {
   --bg: #0b1020;
   --card: #121a2f;
@@ -259,4 +283,5 @@ a:focus, button:focus {
 .resume-buttons {
   margin-top: 10px;
 }
+
 
