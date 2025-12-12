@@ -56,7 +56,7 @@ header img {
   box-shadow:0 6px 18px rgba(0,0,0,.35);
 }
 
-header h1, header h2 {
+header h1 {
   margin:0 0 6px;
   font-size:1.8rem;
   letter-spacing:.3px;
@@ -67,7 +67,8 @@ header p {
   color:var(--muted);
 }
 
-header a {
+/* ---------- BUTTONS (ONLY FOR CONNECT + VIEW PROJECT) ---------- */
+.btn {
   display:inline-block;
   background:linear-gradient(135deg, var(--accent), var(--accent-2));
   color:#061021;
@@ -76,8 +77,12 @@ header a {
   border-radius:12px;
   transition: transform .12s ease, box-shadow .12s ease;
   box-shadow:0 6px 16px rgba(90,169,255,.35);
+  text-decoration:none;
 }
-header a:hover { transform:translateY(-2px); }
+.btn:hover {
+  transform:translateY(-2px);
+  text-decoration:none;
+}
 
 /* ---------- SECTION STYLING ---------- */
 section {
@@ -157,19 +162,10 @@ h2 {
   font-weight:600;
 }
 
-/* ---------- FIXED: SIMPLE TEXT PROJECT LINKS ---------- */
-#Projects a {
-  background:none;
-  padding:0;
-  border-radius:0;
+/* normal project link (no button) */
+#Projects a:not(.btn) {
   color:var(--accent);
   font-weight:500;
-  text-decoration:underline;
-  margin-left:6px;
-}
-
-#Projects a:hover {
-  opacity:.85;
   text-decoration:underline;
 }
 
@@ -189,7 +185,7 @@ footer li { margin:.35rem 0; }
   header td { display:block; padding:0; }
   header img { margin:0 auto 14px; width:120px; height:120px; }
   header h1, header p, header a { text-align:center; }
-  header a { margin: 6px auto 0; }
+  header a.btn { margin: 6px auto 0; }
 
   section { padding:16px; }
   #Education th, #Education td { padding:10px 12px; }
