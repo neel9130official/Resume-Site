@@ -1,3 +1,32 @@
+
+.cert-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.cert-column {
+    width: 48%;
+}
+
+.cert-column p {
+    margin: 6px 0 2px;
+}
+
+.cert-column a {
+    text-decoration: none;
+    color: #0066cc;
+    font-size: 0.95rem;
+}
+
+.cert-column a:hover {
+    text-decoration: underline;
+}
+
+.cert-gap {
+    height: 12px;
+}
+
 .contact-list {
     list-style: none;
     padding-left: 0;
@@ -311,6 +340,7 @@ a:focus, button:focus {
 .resume-buttons {
   margin-top: 10px;
 }
+
 
 
 
