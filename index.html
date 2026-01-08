@@ -14,9 +14,8 @@
                                 target="_blank">@COEP</a> | Full Stack Developer
                             | Machine Learning Enthusiast </p> <div
                             class="top-buttons"> <a href="#connectWithMe"
-                                class="btn-small">Connect</a> <a
-                                id="viewResumeBtn" class="btn-small">View
-                                Resume</a> </div> </td> </tr> </table> </header>
+                                class="btn-small">Connect</a> <button id="viewResumeBtn" class="btn-small">View Resume</button>
+ </div> </td> </tr> </table> </header>
         <hr> <main> <section id="Education">
                 <h2>Education</h2> <table border> <tr> <th>Sr.No.</th>
                         <th>Degree</th> <th>College</th> <th>Year</th> </tr>
@@ -101,6 +100,36 @@
                 <iframe
                     src="Nilkanth_Mundkar_Resume_4.pdf#navpanes=0"
                     class="pdf-viewer"></iframe> </div> </div>
-        <script> // Open modal document.getElementById("viewResumeBtn").onclick = function () { document.getElementById("resumeModal").style.display = "block"; } // Close modal on X document.querySelector(".close").onclick = function () { document.getElementById("resumeModal").style.display = "none"; } // Close modal when clicking outside window.onclick = function (event) { let modal = document.getElementById("resumeModal"); if (event.target === modal) { modal.style.display = "none"; } } </script>
+        <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const viewBtn = document.getElementById("viewResumeBtn");
+    const modal = document.getElementById("resumeModal");
+    const closeBtn = modal.querySelector(".close");
+
+    if (!viewBtn || !modal || !closeBtn) {
+      console.error("Resume modal elements not found");
+      return;
+    }
+
+    // Open modal
+    viewBtn.addEventListener("click", function () {
+      modal.style.display = "block";
+    });
+
+    // Close modal on X
+    closeBtn.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+
+    // Close modal on outside click
+    window.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+</script>
+
     </body> </html>
+
 
